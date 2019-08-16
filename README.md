@@ -1,6 +1,6 @@
 # GraphQL Schema Visualizer
 
-A combination of tools to help visualize your GraphQL schema. It assumes you have split your schema in to smaller, modular pieces (look at the [schema-modules](./schema-modules) direcotry)
+A combination of tools to help visualize your GraphQL schema. It assumes you have split your schema in to smaller, modular pieces (look at the [schema-modules](./schema-modules) directory).
 
 ## Getting started
 Once you install Node.js, just run `npm install` to grab all dependencies.
