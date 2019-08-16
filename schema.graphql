@@ -1,0 +1,63 @@
+###################################
+### THIS FILE IS AUTO-GENERATED ###
+# Any changes made to this file won't actually affect the schema.
+# Instead look at the content of the "graphql-schema-modules" directory.
+###################################  
+
+
+ type Query {
+  getPersonById(id: ID!): Person
+  getAllPeople: [Person!]!
+  getAllMyPets(personId: ID): [Pet!]!
+  getPet(id: ID): Pet
+  getAllPets: [Pet!]!
+}
+
+type Mutation {
+  createPerson(input: PersonInput): Person
+  updatePersonPet(personId: ID!, pets: [ID!]): Person
+  createPet(input: PetInput!): Pet
+  updatePet(id: ID!, input: PetInput!): Pet
+}
+
+type Person {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  pets: [Pet!]!
+}
+
+input PersonInput {
+  firstName: String!
+  lastName: String!
+}
+
+type Pet {
+  id: ID!
+  type: AnimalType!
+  name: String
+  age: Int
+  owner: Person
+}
+
+input PetInput {
+  type: AnimalType!
+  name: String
+  age: Int
+  owner: PersonInput!
+}
+
+enum AnimalType {
+  DOG
+  CAT
+  HAMSTER
+  RABBIT
+  FISH
+  BIRD
+  OTHER
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

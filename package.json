@@ -1,0 +1,31 @@
+{
+  "name": "graphqlviz-schema-merge",
+  "version": "1.0.0",
+  "description": "Sample project to show how to user graphqlviz with split schema modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "merge-schema": "node ./graphql-module-merger",
+    "_generate-sdl-introspection": "node ./sdl-to-introspection-converter.js",
+    "_graphqlviz": "graphqlviz --graphql schema.graphql --theme graphqlviz-theme.json | dot -Tpng -o schema.png",
+    "schema-viz-interactive": "npm-run-all --sequential merge-schema _generate-sdl-introspection",
+    "schema-viz-static": "npm-run-all --sequential merge-schema _graphqlviz",
+    "interactive-schema": "http-server interactive-schema/ -p 6262"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morficus/graphqlviz-schema-merge.git"
+  },
+  "author": "Maurice Wililiams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morficus/graphqlviz-schema-merge/issues"
+  },
+  "homepage": "https://github.com/morficus/graphqlviz-schema-merge#readme",
+  "dependencies": {
+    "graphqlviz": "^3.0.0",
+    "http-server": "^0.11.1",
+    "merge-graphql-schemas": "^1.7.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

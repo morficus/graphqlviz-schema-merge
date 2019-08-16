@@ -1,0 +1,22 @@
+type Query {
+    getPersonById(id: ID!): Person
+    getAllPeople: [Person!]!
+    getAllMyPets(personId: ID): [Pet!]!
+}
+
+type Mutation {
+    createPerson(input: PersonInput): Person
+    updatePersonPet(personId: ID!, pets: [ID!]): Person
+}
+
+type Person {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    pets: [Pet!]!
+}
+
+input PersonInput {
+    firstName: String!
+    lastName: String!
+}

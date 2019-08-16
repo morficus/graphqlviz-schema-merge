@@ -1,0 +1,57 @@
+{
+    "header": {
+        "invert": true
+    },
+    "anchor": {
+        "input": true,
+        "header": true
+    },
+    "edgesToSelf": true,
+    "field": {
+        "align": "LEFT",
+        "hideSeperators": false,
+        "colorArgs": false,
+        "sort": true,
+        "noargs": false
+    },
+    "edgeLabels": {
+        "input": "",
+        "union": "",
+        "interface": ""
+    },
+    "types": {
+        "color": "dodgerblue4",
+        "hide": false,
+        "group": false,
+        "groupLabel": "Types",
+        "stereotype": null
+    },
+    "inputs": {
+        "color": "BLACK",
+        "hide": true,
+        "group": false,
+        "groupLabel": "Input Types",
+        "stereotype": "input"
+    },
+    "enums": {
+        "color": "gray56",
+        "hide": true,
+        "group": false,
+        "groupLabel": "Enum Types",
+        "stereotype": "enumeration"
+    },
+    "interfaces": {
+        "color": "BLACK",
+        "hide": false,
+        "group": false,
+        "groupLabel": "Interface Types",
+        "stereotype": "interface"
+    },
+    "unions": {
+        "color": "BLACK",
+        "hide": false,
+        "group": false,
+        "groupLabel": "Unions",
+        "stereotype": "union"
+    }
+}

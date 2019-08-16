@@ -1,0 +1,35 @@
+type Query {
+    getPet(id: ID): Pet
+    getAllPets: [Pet!]!
+}
+
+type Mutation {
+    createPet(input: PetInput!): Pet
+    updatePet(id: ID! input: PetInput!): Pet
+}
+
+type Pet {
+    id: ID!
+    type: AnimalType!
+    name: String
+    age: Int
+    owner: Person
+}
+
+input PetInput {
+    type: AnimalType!
+    name: String
+    age: Int
+    owner: PersonInput!
+}
+
+
+enum AnimalType {
+    DOG
+    CAT
+    HAMSTER
+    RABBIT
+    FISH
+    BIRD
+    OTHER
+}
